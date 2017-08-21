@@ -18,13 +18,15 @@
   },
   "homepage": "https://github.com/hapijs/university",
   "dependencies": {
+    "blipp": "^2.3.0",
     "hapi": "16.x.x",
     "hapi-auth-basic": "4.x.x",
     "hoek": "4.x.x"
   },
   "scripts": {
-    "test": "lab -a code -t 100 -L -v",
-    "test-cov-html": "lab -a code -L -r html -o coverage.html",
+    "test": "lab -a code -t 100 -v",
+    "test-all": "lab -r console -o stdout -r html -o coverage.html -r lcov -o lcov.info -r json -o data.json",
+    "test-report-html": "lab -a code -L -r html -o ./lib/coverage.html",
     "start": "node lib/start.js"
   },
   "devDependencies": {

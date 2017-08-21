@@ -98,6 +98,7 @@ describe('/private', () => {
 
 
 internals.header = function (username, password) {
-
+    // const data = 'Basic ' + (new Buffer(username + ':' + password, 'utf8')).toString('base64');
+    // console.log('header',data);
     return 'Basic ' + (new Buffer(username + ':' + password, 'utf8')).toString('base64');
 };
